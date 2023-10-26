@@ -14,7 +14,7 @@ builder.Services.AddDbContext<MyDatabaseContext>(options =>
 builder.Services.addstackexchangerediscache(options=>
 {
     options.configuration=builder.configuration["AZURE_REDIS_CONNECTIONSTRING"];
-    options.instancename="SampleInstance"
+    options.instancename="SampleInstance";
 })
 var app = builder.Build();
 
