@@ -11,7 +11,7 @@ builder.Logging.AddAzureWebAppDiagnostics();
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<MyDatabaseContext>(options =>
-                    options.UsesqlServer(builder.configuration.getconnectionstring(["AZURE_POSTGRESQL_CONNECTIONSTRING"])));
+                    options.UsesqlServer(builder.configuration.getconnectionstring("AZURE_POSTGRESQL_CONNECTIONSTRING")));
 
 builder.Services.addstackexchangerediscache(options=>
 {
