@@ -9,8 +9,13 @@ builder.Logging.AddAzureWebAppDiagnostics();
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<MyDatabaseContext>(options =>
-                    options.UseSqlite("Data Source=localdatabase.db"));
+                    options.UsesqlServer(builder.configuration.getconnectionstring(["AZURE_POSTGRESQL_CONNECTIONSTRING"])));
 
+builder.Services.addstackexchangerediscache(options=>
+{
+    options.configuration=builder.configuration["AZURE_REDIS_CONNECTIONSTRING"];
+    options.instancename="SampleInstance"
+})
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
