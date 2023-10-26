@@ -15,7 +15,7 @@ builder.Services.addstackexchangerediscache(options=>
 {
     options.configuration=builder.configuration["AZURE_REDIS_CONNECTIONSTRING"];
     options.instancename="SampleInstance";
-})
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
