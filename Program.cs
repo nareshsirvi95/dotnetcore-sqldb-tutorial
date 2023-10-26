@@ -1,6 +1,6 @@
 ﻿using DotNetCoreSqlDb.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.addstackexchangerediscache;
 
 var builder = WebApplication.CreateBuilder(args);
 
